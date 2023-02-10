@@ -1,0 +1,62 @@
+BOD
+?BOD
+ggplot(data=BOD,
+       mapping = aes(x= Time,
+                     y=demand))+
+  geom_point(size=5)+
+  geom_line(colour="red")
+ggplot(BOD,aes(Time,demand))+geom_point()+geom_line()
+CO2
+CO2 %>% 
+  ggplot(aes(conc,uptake,colour= Treatment))+
+  geom_point(size=3,alpha=0.5)+geom_smooth()
+grades<-data.frame(
+  first=c("mark","anthony","sweety"),
+  last=c("doe","winslet","rye"),
+  grade=c(22,33,56)
+  )
+library(tidyverse)
+grades2<-tibble(
+  first=c("mark","anthony","sweety"),
+  last=c("doe","winslet","rye"),
+  grade=c(22,33,56)
+)
+grades3<-tribble(
+  ~first,~last,~grade,
+  "mark","dave",44,
+  "lily","potter",99,
+  "james","potter",75
+ 
+)
+BOD
+?BOD
+ggplot(data=BOD,
+       mapping = aes(x= Time,
+                     y=demand))+
+  geom_point(size=5)+
+  geom_line(colour="red")
+ggplot(BOD,aes(Time,demand))+geom_point()+geom_line()
+CO2
+CO2 %>%
+  ggplot(aes(conc,uptake,colour= Treatment))+
+  geom_point(size=3,alpha=0.5)+geom_smooth()
+  > > ggplot(data=iris, aes(x=Sepal.Length)) + geom_histogram()
+Error: unexpected '>' in ">"
+> ggplot(data=iris, aes(x=Sepal.Length)) + geom_histogram()
+`stat_bin()` using `bins = 30`. Pick better
+value with `binwidth`.
+> ggplot(data=iris, aes(x=Sepal.Length)) + geom_histogram(fill="yellow",col="orange")
+`stat_bin()` using `bins = 30`. Pick better
+value with `binwidth`.
+> ggplot(data=iris, aes(x=Sepal.Length)) + geom_histogram(fill="yellow",col="black")
+`stat_bin()` using `bins = 30`. Pick better
+value with `binwidth`.
+> ggplot(data=diamonds,aes(x=cut))+geom_bar)
+Error: unexpected ')' in "ggplot(data=diamonds,aes(x=cut))+geom_bar)"
+> ggplot(data=diamonds,aes(x=cut)+geom_bar)
+Error in aes(x = cut) + geom_bar :
+  non-numeric argument to binary operator
+> ggplot(data=diamonds,aes(x=cut))+geom_bar()
+ ggplot(data=diamonds,aes(x=cut,fill=cut))+geom_bar()
+> ggplot(data=diamonds,aes(x=carat,y=price))+geom_point()
+> ggplot(data=diamonds,aes(x=carat,y=price,col=cut))+geom_point(
